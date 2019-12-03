@@ -1,0 +1,11 @@
+.qr-reader {
+  margin-top: 10vw;
+  width: 80vw;
+}
+
+@media (min-width: 960px) {
+  .qr-reader {
+    margin-top: 10vh;
+    width: 50vh;
+  }
+}
