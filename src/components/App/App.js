@@ -1,20 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import QrReader from 'react-qr-reader'
+import { Switch, Route } from 'react-router-dom'
+import NuevoRegistro from '../NuevoRegistro/NuevoRegistro';
+import LeerQR from '../LeerQR';
 
 const App = () => {
-
-  const [data, setData] = useState('')
-
-  const handleScan = data => {
-    if (data) {
-      setData(data)
-    }
-  }
-
-  const handleError = err => {
-    console.error(err)
-  }
 
   return (
     <div id="contenedor">
@@ -22,14 +12,10 @@ const App = () => {
         JP's system
       </div>
       <div id="contenido">
-        <QrReader
-          delay={300}
-          onError={handleError}
-          onScan={handleScan}
-          style={{ marginTop: '10vw', width: '80vw' }}
-        />
-        <h1>Aquí abajo aparece lo leído</h1>
-        <p>{data}</p>
+        <Switch>
+          <Route exact path="/" component={NuevoRegistro} />
+          <Route exact path="/qr" component={LeerQR} />
+        </Switch>
       </div>
     </div>
   );
