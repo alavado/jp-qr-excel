@@ -17,14 +17,20 @@ const App = () => {
   }
 
   return (
-    <div className="App">
-      <QrReader
-        delay={300}
-        onError={handleError}
-        onScan={handleScan}
-        style={{ width: '80vh' }}
-      />
-      <p>{data}</p>
+    <div id="contenedor">
+      <div id="barra-superior">
+        JP's system
+      </div>
+      <div id="contenido">
+        <QrReader
+          delay={300}
+          onError={handleError}
+          onScan={handleScan}
+          style={{ marginTop: '10vw', width: '80vw' }}
+        />
+        <h1>Aquí abajo aparece lo leído</h1>
+        <p>{data}</p>
+      </div>
     </div>
   );
 }

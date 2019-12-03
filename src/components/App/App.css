@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contenido p {
+  margin-top: 16px;
+  width: 80vw;
+}
+
+#barra-superior {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 2em;
+}
+
+.jp-lee-qr {
+  display: flex;
+  justify-content: center;
+}
