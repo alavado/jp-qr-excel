@@ -7,8 +7,10 @@ import { BrowserRouter } from 'react-router-dom'
 import { ApolloProvider } from '@apollo/react-hooks'
 import ApolloClient from 'apollo-boost'
 
+const isDev = window.location.href.indexOf('localhost') >= 0
+
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: `http://${isDev ? 'localhost' : '192.168.0.20'}:4000/graphql`
 })
 
 ReactDOM.render(
