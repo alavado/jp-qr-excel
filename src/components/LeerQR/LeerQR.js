@@ -7,11 +7,11 @@ import './LeerQR.css'
 const LeerQR = () => {
 
   const [data, setData] = useState('')
-  const audio = new Audio(beep)
 
   const handleScan = data => {
     if (data) {
       setData(data)
+      var audio = new Audio(beep)
       audio.play()
     }
   }
