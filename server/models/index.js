@@ -1,1 +1,2 @@
 require('./comida')
+require('./trabajador')

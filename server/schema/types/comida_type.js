@@ -1,5 +1,5 @@
-const graphql = require('graphql');
-const { GraphQLObjectType, GraphQLString, GraphQLID } = graphql;
+const graphql = require('graphql')
+const { GraphQLObjectType, GraphQLString, GraphQLID } = graphql
 
 const ComidaType = new GraphQLObjectType({
   name: 'ComidaType',
@@ -7,6 +7,6 @@ const ComidaType = new GraphQLObjectType({
     id: { type: GraphQLID },
     nombre: { type: GraphQLString }
   })
-});
+})
 
-module.exports = ComidaType;
+module.exports = ComidaType
