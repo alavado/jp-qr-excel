@@ -10,7 +10,7 @@ import ApolloClient from 'apollo-boost'
 const isDev = window.location.href.indexOf('localhost') >= 0
 
 const client = new ApolloClient({
-  uri: `http://${isDev ? '45.55.54.91' : '192.168.0.20'}:4000/graphql`
+  uri: `${isDev ? 'http://localhost' : 'https://compsci.cl'}:4000/graphql`
 })
 
 ReactDOM.render(
