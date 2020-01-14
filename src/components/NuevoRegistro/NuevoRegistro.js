@@ -1,8 +1,15 @@
 import React from 'react'
+import { useQuery } from '@apollo/react-hooks'
+import query from '../../queries/fetchComidas'
 import { Link } from 'react-router-dom'
 import './NuevoRegistro.css'
 
 const NuevoRegistro = () => {
+
+  const { loading, error, data } = useQuery(query)
+
+  console.log(data)
+
   return (
     <div className="formulario">
       <h1>Nuevo registro</h1>

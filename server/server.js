@@ -6,6 +6,10 @@ const schema = require('./schema/schema')
 
 const app = express()
 
+const cors = require('cors')
+app.use(cors())
+app.options('*', cors())
+
 mongoose.connect(require('./secret').mongoURI)
 mongoose.connection
   .once('open', () => console.log('Connected to MongoLab instance.'))
