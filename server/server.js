@@ -6,11 +6,7 @@ const schema = require('./schema/schema')
 
 const app = express()
 
-const MONGO_URI = require('./secret').MONGO_URI
-if (!MONGO_URI) {
-  throw new Error('You must provide a MongoLab URI')
-}
-mongoose.connect(MONGO_URI)
+mongoose.connect(require('./secret').mongoURI)
 mongoose.connection
   .once('open', () => console.log('Connected to MongoLab instance.'))
   .on('error', error => console.log('Error connecting to MongoLab:', error))
