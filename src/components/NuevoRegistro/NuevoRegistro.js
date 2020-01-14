@@ -8,17 +8,11 @@ const NuevoRegistro = () => {
 
   const { loading, error, data } = useQuery(query)
 
-  console.log(data)
-
   return (
     <div className="formulario">
       <h1>Nuevo registro</h1>
       <select>
-        <option>Desayuno</option>
-        <option>Almuerzo</option>
-        <option>Cena</option>
-        <option>Colación fría</option>
-        <option>Colación noche</option>
+        {!loading && data.comidas.map(({ id, nombre }) => <option key={id}>{nombre}</option>)}
       </select>
       <Link to="/qr"><button>Aceptar</button></Link>
     </div>
