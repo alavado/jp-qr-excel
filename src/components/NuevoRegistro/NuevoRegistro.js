@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
-import query from '../../queries/fetchComidas'
+import query from '../../queries/comidas'
 import { Link } from 'react-router-dom'
 import './NuevoRegistro.css'
 
