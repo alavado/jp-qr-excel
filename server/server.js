@@ -20,6 +20,22 @@ app.use('/graphql', expressGraphQL({
   graphiql: true
 }))
 
-app.listen(4000, () => {
-  console.log('Listening')
-})
+const ip = require('ip').address()
+if (ip === '45.55.54.91') {
+  const https = require('https')
+  const fs = require('fs')
+  const options = {
+    key: fs.readFileSync('/etc/letsencrypt/live/compsci.cl-0001/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/compsci.cl-0001/fullchain.pem')
+  }
+  https.createServer(options, app).listen(4000, () => {
+    console.log('Escuchando puerto (HTTPS):', 4000)
+  })
+}
+else {
+  console.log(`No estoy en el servidor (IP: ${ip})`);
+  app.listen(4000, () => {
+    console.log('Escuchando puerto:', 4000)
+  })
+}
+

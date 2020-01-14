@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div id="contenedor">
       <div id="barra-superior">
-        JP's system
+        Registro JP
       </div>
       <div id="contenido">
         <Switch>
