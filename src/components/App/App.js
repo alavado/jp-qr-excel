@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom'
-import NuevoRegistro from '../NuevoRegistro/NuevoRegistro';
 import LeerQR from '../LeerQR';
 
 const App = () => {
@@ -12,10 +10,7 @@ const App = () => {
         Registro JP
       </div>
       <div id="contenido">
-        <Switch>
-          <Route exact path="/" component={NuevoRegistro} />
-          <Route exact path="/qr" component={LeerQR} />
-        </Switch>
+        <LeerQR />
       </div>
     </div>
   );

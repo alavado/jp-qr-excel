@@ -6,12 +6,12 @@ import './LeerQR.css'
 
 const LeerQR = () => {
 
-  const [data, setData] = useState('')
+  const [data, setData] = useState(null)
+  const audio = new Audio(beep)
 
   const handleScan = data => {
     if (data) {
       setData(data)
-      var audio = new Audio(beep)
       audio.play()
     }
   }
@@ -22,18 +22,21 @@ const LeerQR = () => {
 
   return (
     <div className="contenedor">
+      {!data ?
       <QrReader
         delay={300}
         onError={handleError}
         onScan={handleScan}
         className="qr-reader"
-      />
-      <h1>Aquí abajo aparece lo leído</h1>
-      <p>{data}</p>
-      <div className="formulario">
-        <Link to="/"><button>Agregar registro</button></Link>
-        <Link to="/"><button>Cancelar</button></Link>
-      </div>
+      /> :
+      <>
+        <h1>Aquí abajo aparece lo leído</h1>
+        <p>{data}</p>
+        <div className="formulario">
+          <button>Agregar registro</button>
+          <button>Cancelar</button>
+        </div>
+      </>}
     </div>
   )
 }
