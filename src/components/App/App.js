@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import LeerQR from '../LeerQR';
+import React from 'react'
+import './App.css'
+import LeerQR from '../LeerQR'
 
 const App = () => {
 
@@ -10,10 +10,10 @@ const App = () => {
         Registro JP
       </div>
       <div id="contenido">
-        <LeerQR />
+        {/* <LeerQR /> */}
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
