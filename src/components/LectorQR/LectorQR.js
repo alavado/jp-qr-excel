@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import QrReader from 'react-qr-reader'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import beep from '../../assets/beep.wav'
 import './LectorQR.css'
 
 const LectorQR = () => {
 
-  const [data, setData] = useState(null)
   const audio = new Audio(beep)
+  const history = useHistory()
 
   const handleScan = data => {
     if (data) {
-      setData(data)
       audio.play()
+      history.push('/preview')
     }
   }
 
@@ -22,21 +22,12 @@ const LectorQR = () => {
 
   return (
     <div className="contenedor">
-      {!data ?
       <QrReader
         delay={300}
         onError={handleError}
         onScan={handleScan}
         className="qr-reader"
-      /> :
-      <>
-        <h1>Aquí abajo aparece lo leído</h1>
-        <p>{data}</p>
-        <div className="formulario">
-          <button>Agregar registro</button>
-          <button>Cancelar</button>
-        </div>
-      </>}
+      />
     </div>
   )
 }
