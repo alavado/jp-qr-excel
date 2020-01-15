@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import LeerQR from '../LeerQR'
+import LectorQR from '../LectorQR'
 
 const App = () => {
 
@@ -10,7 +10,7 @@ const App = () => {
         Registro JP
       </div>
       <div id="contenido">
-        {/* <LeerQR /> */}
+        {/* <LectorQR /> */}
       </div>
     </div>
   )

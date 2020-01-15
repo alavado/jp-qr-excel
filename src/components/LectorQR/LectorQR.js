@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import QrReader from 'react-qr-reader'
 import { Link } from 'react-router-dom'
 import beep from '../../assets/beep.wav'
-import './LeerQR.css'
+import './LectorQR.css'
 
-const LeerQR = () => {
+const LectorQR = () => {
 
   const [data, setData] = useState(null)
   const audio = new Audio(beep)
@@ -41,4 +41,4 @@ const LeerQR = () => {
   )
 }
 
-export default LeerQR
+export default LectorQR
