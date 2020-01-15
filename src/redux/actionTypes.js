@@ -1,0 +1,1 @@
+export const FIJAR_DATOS_NUEVO_REGISTRO = 'LEER_QR'
