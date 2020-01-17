@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Route } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 import LectorQR from '../LectorQR'
 import PrevisualizacionNuevoRegistro from '../PrevizualizacionNuevoRegistro'
 
@@ -14,6 +14,7 @@ const App = () => {
       <div id="contenido"> 
         <Route path="/lectorqr" component={LectorQR} />
         <Route path="/preview" component={PrevisualizacionNuevoRegistro} /> 
+        <Link to="/lectorqr">Leer QR</Link>
       </div>
     </div>
   )
