@@ -1,10 +1,14 @@
 import React from 'react'
 import './PrevisualizacionNuevoRegistro.css'
+import { useSelector } from 'react-redux'
 
 const PrevisualizacionNuevoRegistro = () => {
+
+  const datosNuevoRegistro = useSelector(state => state.registros.datosNuevoRegistro)
+  
   return (
     <div>
-      preview
+      { datosNuevoRegistro && datosNuevoRegistro.map(d => <p>{d}</p>) }
     </div>
   )
 }

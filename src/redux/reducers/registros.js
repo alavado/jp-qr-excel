@@ -1,7 +1,7 @@
 import { FIJAR_DATOS_NUEVO_REGISTRO } from "../actionTypes"
 
 const initialState = {
-  datosNuevoRegistro: {}
+  datosNuevoRegistro: ''
 }
 
 export default function(state = initialState, action) {
@@ -9,7 +9,7 @@ export default function(state = initialState, action) {
     case FIJAR_DATOS_NUEVO_REGISTRO: {
       return {
         ...state,
-        datosNuevoRegistro: action.payload
+        datosNuevoRegistro: action.payload.split('\n')
       }
     }
     default:
