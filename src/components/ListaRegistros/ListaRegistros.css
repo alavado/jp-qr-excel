@@ -1,6 +1,7 @@
 .tabla-registros {
   border-collapse: collapse;
   width: 100%;
+  font-size: 12px;
 }
 
 .tabla-registros th {
