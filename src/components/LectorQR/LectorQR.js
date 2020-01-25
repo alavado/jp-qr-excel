@@ -25,7 +25,7 @@ const LectorQR = () => {
   }
 
   return (
-    <div className="contenedor">
+    <div className="contenido">
       <QrReader
         delay={300}
         onError={handleError}

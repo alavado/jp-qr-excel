@@ -12,13 +12,11 @@ const App = () => {
       <div id="barra-superior">
         Registro JP
       </div>
-      <div id="contenido">
-        <Switch>
-          <Route path="/" exact component={ListaRegistros} />
-          <Route path="/lectorqr" component={LectorQR} />
-          <Route path="/preview" component={PrevisualizacionNuevoRegistro} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/" exact component={ListaRegistros} />
+        <Route path="/lectorqr" component={LectorQR} />
+        <Route path="/preview" component={PrevisualizacionNuevoRegistro} />
+      </Switch>
     </div>
   )
 }
