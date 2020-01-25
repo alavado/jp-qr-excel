@@ -34,3 +34,32 @@
 .tabla-registros tr:nth-child(even) {
   background-color: #F3CFB3;
 }
+
+.fab {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  background-color: #D76B00;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.fab svg {
+  margin-left: -4px;
+}
+
+.fab .agregar-mas {
+  color: white;
+  position: absolute;
+  font-weight: bolder;
+  right: 8px;
+  top: 6px;
+  text-shadow: -1px 1px 1px #D76B00;
+}

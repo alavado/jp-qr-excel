@@ -32,44 +32,9 @@ a:focus, input:focus {
   font-size: 1.5em;
 }
 
-.jp-lee-qr {
-  display: flex;
-  justify-content: center;
-}
-
 .contenido {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  flex: 1;
-}
-
-.fab {
-  position: absolute;
-  bottom: 32px;
-  right: 32px;
-  background-color: #D76B00;
-  width: 64px;
-  height: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 32px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
-
-.fab svg {
-  margin-left: -4px;
-}
-
-.fab .agregar-mas {
-  color: white;
-  position: absolute;
-  font-weight: bolder;
-  right: 10px;
-  top: 8px;
-  font-size: 24px;
-  text-shadow: -1px 1px 1px #D76B00;
 }

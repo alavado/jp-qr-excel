@@ -1,8 +1,8 @@
 import React from 'react'
 import './ListaRegistros.css'
-import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUtensils as iconoAgregarRegistro } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 const ListaRegistros = () => {
 
@@ -35,6 +35,10 @@ const ListaRegistros = () => {
 
   return (
     <div className="contenido">
+      <Link to="/lectorqr" className="fab">
+        <FontAwesomeIcon icon={iconoAgregarRegistro} color="white" size="1x" />
+        <div className="agregar-mas">+</div>
+      </Link>
       <table className="tabla-registros">
         <thead>
           <tr>
@@ -48,10 +52,6 @@ const ListaRegistros = () => {
           {registros.map((r, i) => <tr key={i}><td>{r.fecha}</td><td>{r.trabajador.nombre}</td><td>{r.comida}</td><td>${r.valor}</td></tr>)}
         </tbody>
       </table>
-      <Link to="/lectorqr" className="fab">
-        <FontAwesomeIcon icon={iconoAgregarRegistro} color="white" size="2x" />
-        <div className="agregar-mas">+</div>
-      </Link>
     </div>
   )
 }
