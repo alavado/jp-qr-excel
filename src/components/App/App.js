@@ -1,8 +1,9 @@
 import React from 'react'
 import './App.css'
-import { Link, Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import LectorQR from '../LectorQR'
 import PrevisualizacionNuevoRegistro from '../PrevizualizacionNuevoRegistro'
+import ListaRegistros from '../ListaRegistros'
 
 const App = () => {
 
@@ -11,10 +12,12 @@ const App = () => {
       <div id="barra-superior">
         Registro JP
       </div>
-      <div id="contenido"> 
-        <Route path="/lectorqr" component={LectorQR} />
-        <Route path="/preview" component={PrevisualizacionNuevoRegistro} /> 
-        <Link to="/lectorqr">Leer QR</Link>
+      <div id="contenido">
+        <Switch>
+          <Route path="/" exact component={ListaRegistros} />
+          <Route path="/lectorqr" component={LectorQR} />
+          <Route path="/preview" component={PrevisualizacionNuevoRegistro} />
+        </Switch>
       </div>
     </div>
   )
