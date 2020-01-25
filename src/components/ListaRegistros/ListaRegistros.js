@@ -36,7 +36,7 @@ const ListaRegistros = () => {
   return (
     <div className="contenido">
       <div className="barra-superior">
-        Registro JP
+        <h1>Registro JP</h1>
       </div>
       <Link to="/lectorqr" className="fab">
         <FontAwesomeIcon icon={iconoAgregarRegistro} color="white" size="1x" />

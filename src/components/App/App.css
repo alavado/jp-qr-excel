@@ -27,12 +27,16 @@ a:focus, input:focus {
 
 .barra-superior {
   color: white;
-  padding: 32px 0;
-  font-size: 1.5em;
+  padding: 24px 0;
   background-color: #D76B00;
   width: 100%;
   padding-left: 24px;
+}
+
+.barra-superior h1 {
+  font-size: 1.5em;
   font-weight: bold;
+  animation: aparece-titulo .25s ease-in-out both;
 }
 
 .contenido {
@@ -40,4 +44,15 @@ a:focus, input:focus {
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+@keyframes aparece-titulo {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

@@ -27,7 +27,7 @@ const LectorQR = () => {
   return (
     <div className="contenido">
       <div className="barra-superior">
-        Lee el QR del trabajador
+        <h1>Lee el QR del trabajador</h1>
       </div>
       <QrReader
         delay={300}
