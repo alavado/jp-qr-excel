@@ -26,6 +26,9 @@ const LectorQR = () => {
 
   return (
     <div className="contenido">
+      <div className="barra-superior">
+        Lee el QR del trabajador
+      </div>
       <QrReader
         delay={300}
         onError={handleError}

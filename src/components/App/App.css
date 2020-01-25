@@ -22,14 +22,17 @@ a:focus, input:focus {
   align-items: flex-start;
   color: white;
   min-height: 100vh;
-  width: calc(100vw - 48px);
-  margin: 0 24px;
+  width: 100vw;
 }
 
-#barra-superior {
+.barra-superior {
   color: white;
   padding: 32px 0;
   font-size: 1.5em;
+  background-color: #D76B00;
+  width: 100%;
+  padding-left: 24px;
+  font-weight: bold;
 }
 
 .contenido {

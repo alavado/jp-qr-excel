@@ -9,9 +9,6 @@ const App = () => {
 
   return (
     <div id="contenedor">
-      <div id="barra-superior">
-        Registro JP
-      </div>
       <Switch>
         <Route path="/" exact component={ListaRegistros} />
         <Route path="/lectorqr" component={LectorQR} />

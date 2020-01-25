@@ -35,10 +35,14 @@ const ListaRegistros = () => {
 
   return (
     <div className="contenido">
+      <div className="barra-superior">
+        Registro JP
+      </div>
       <Link to="/lectorqr" className="fab">
         <FontAwesomeIcon icon={iconoAgregarRegistro} color="white" size="1x" />
         <div className="agregar-mas">+</div>
       </Link>
+      <h2 className="titulo-tabla">Últimos registros</h2>
       <table className="tabla-registros">
         <thead>
           <tr>

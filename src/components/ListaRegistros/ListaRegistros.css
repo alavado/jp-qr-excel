@@ -63,3 +63,9 @@
   top: 6px;
   text-shadow: -1px 1px 1px #D76B00;
 }
+
+.titulo-tabla {
+  align-self: flex-start;
+  font-size: 18px;
+  margin: 24px;
+}
